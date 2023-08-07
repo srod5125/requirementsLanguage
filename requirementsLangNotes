@@ -1,1 +1,17 @@
 all things are equal, tries to find boundries between spacies, everyting is a paramterized space that can be transformed into any other space
+
+informal descriptive language
+
+human and computer engage in conversation
+
+as rules are added invariants are stored
+when a rules is added that violates a previoulsy held invariant a converastion ensure between rule set and user
+
+a model of a system will output a set of invariants, two models describing the same phenomena will support different invarints, exploring where the pivot points are between the invariants; transofrming the invariant into a query and then posing that query to the other model or the external universe to glue or melt models together
+
+spec lang
+- describe variables + user provided variables
+- conditional actions over those variables
+- perform beadth first search over all potential transitions
+- allow user to define invariants; querey about what sequence of events a system must reach before achieving a pattern amtched state; capute error states
+- make user aware of cases they hadnt considered (as states are explored, compress or pattern match and categorize states)
