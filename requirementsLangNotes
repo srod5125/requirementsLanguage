@@ -15,3 +15,13 @@ spec lang
 - perform beadth first search over all potential transitions
 - allow user to define invariants; querey about what sequence of events a system must reach before achieving a pattern amtched state; capute error states
 - make user aware of cases they hadnt considered (as states are explored, compress or pattern match and categorize states)
+
+structure:
+    variables, model paramaters
+
+    nexts, when + followed by actions over states
+
+    invariants or checks
+
+
+with special messaging module offered
