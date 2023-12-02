@@ -1,6 +1,8 @@
 %{   
-#include "parser.hpp"
-#define YY_USER_ACTION yylloc.first_line = yylloc.last_line = yylineno;
+    #include <iostream>
+    #include "parser.hpp"
+    // #define YY_USER_ACTION yylloc.first_line = yylloc.last_line = yylineno;
+
 %}
 
 %option noyywrap
@@ -23,6 +25,6 @@ DIGIT    [0-9]
 
 "\n"           {return END;}
 
-.              {printf("Error at line %d: unrecognized symbol \"%s\"\n", yylloc.first_line, yytext); exit(0);}
+.              {printf("Error at line %d: unrecognized symbol \"%s\"\n", yylloc.first_line, yytext);}
 
 %%

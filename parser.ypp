@@ -7,8 +7,11 @@
 %{
  #include <stdio.h>
  #include <stdlib.h>
- #include "lexer.hpp"
+ #include <iostream>
+ #include "parser.hpp"
  void yyerror(const char *msg);
+
+int yylex();
 
 class Data {
 public:
@@ -25,8 +28,8 @@ public:
   Data* cval;
 }
 
-%error-verbose
 %locations
+%glr-parser
 
 %start input
 %token MULT DIV PLUS MINUS EQUAL L_PAREN R_PAREN END
@@ -57,12 +60,13 @@ exp:		NUMBER                { $$ = $1; }
 %%
 
 int main(int argc, char **argv) {
-   if (argc > 1) {
+   /* if (argc > 1) {
+      yy_scan_string(argv[1]);
       yyin = fopen(argv[1], "r");
       if (yyin == NULL){
          printf("syntax: %s filename\n", argv[0]);
       }//end if
-   }//end if
+   }//end if */
    yyparse(); // Calls yylex() for tokens.
    return 0;
 }

@@ -25,3 +25,11 @@ structure:
 
 
 with special messaging module offered
+
+
++ over a set of decisions :> find set of minimal distinguishing invariants then ask user to decide which invariants to support
++ when lang_engine doesn't understand input :> ask user for set of disinguishing inputs should be able to answer any question: when the model cannot understand something :> should query the user and disentablge or peel away ambiquity
+
+
+
+TODO: make make file
