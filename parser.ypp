@@ -29,10 +29,9 @@ public:
 }
 
 %locations
-%glr-parser
 
 %start input
-%token MULT DIV PLUS MINUS EQUAL L_PAREN R_PAREN END
+%token MULT DIV PLUS MINUS EQUAL L_PAREN R_PAREN
 %token <dval> NUMBER
 %type <dval> exp
 %type <cval> input
@@ -46,7 +45,7 @@ input:	{ $$ = new Data(); }
 			| input line { $$ = $1; $1->data++; }
 			;
 
-line:		exp EQUAL END         { printf("\t%f\n", $1);}
+line:		exp EQUAL ';'         { printf("\t->%f\n", $1);}
 			;
 
 exp:		NUMBER                { $$ = $1; }

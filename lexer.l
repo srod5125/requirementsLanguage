@@ -1,7 +1,7 @@
 %{   
     #include <iostream>
     #include "parser.hpp"
-    // #define YY_USER_ACTION yylloc.first_line = yylloc.last_line = yylineno;
+    //#define YY_USER_ACTION yylloc.first_line = yylloc.last_line = yylineno;
 
 %}
 
@@ -22,8 +22,6 @@ DIGIT    [0-9]
 (\.{DIGIT}+)|({DIGIT}+(\.{DIGIT}*)?([eE][+-]?[0-9]+)?)   {yylval.dval = atof(yytext); return NUMBER;}
 
 [ \t]+         {/* ignore spaces */}
-
-"\n"           {return END;}
 
 .              {printf("Error at line %d: unrecognized symbol \"%s\"\n", yylloc.first_line, yytext);}
 
