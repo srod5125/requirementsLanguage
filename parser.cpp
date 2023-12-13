@@ -114,10 +114,11 @@ enum yysymbol_kind_t
   YYSYMBOL_END = 10,                       /* END  */
   YYSYMBOL_NUMBER = 11,                    /* NUMBER  */
   YYSYMBOL_UMINUS = 12,                    /* UMINUS  */
-  YYSYMBOL_YYACCEPT = 13,                  /* $accept  */
-  YYSYMBOL_input = 14,                     /* input  */
-  YYSYMBOL_line = 15,                      /* line  */
-  YYSYMBOL_exp = 16                        /* exp  */
+  YYSYMBOL_13_ = 13,                       /* ';'  */
+  YYSYMBOL_YYACCEPT = 14,                  /* $accept  */
+  YYSYMBOL_input = 15,                     /* input  */
+  YYSYMBOL_line = 16,                      /* line  */
+  YYSYMBOL_exp = 17                        /* exp  */
 };
 typedef enum yysymbol_kind_t yysymbol_kind_t;
 
@@ -388,13 +389,13 @@ typedef int yytype_uint16;
 #define YYLAST   30
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  13
+#define YYNTOKENS  14
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  4
 /* YYNRULES -- Number of rules.  */
 #define YYNRULES  11
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  21
+#define YYNSTATES  20
 /* YYMAXRHS -- Maximum number of symbols on right-hand side of rule.  */
 #define YYMAXRHS 3
 /* YYMAXLEFT -- Maximum number of symbols to the left of a handle
@@ -420,7 +421,7 @@ static const yytype_int8 yytranslate[] =
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-       2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+       2,     2,     2,     2,     2,     2,     2,     2,     2,    13,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -453,16 +454,15 @@ static const yytype_int8 yyrline[] =
 };
 #endif
 
-#define YYPACT_NINF (-6)
+#define YYPACT_NINF (-2)
 #define YYTABLE_NINF (-1)
 
 /* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
    STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-      -6,     0,    -6,    14,    14,    -6,    -6,    23,    -6,    -2,
-      14,    14,    14,    14,    -5,    -6,    -6,    -6,     9,     9,
-      -6
+      -2,     0,    -2,    19,    19,    -2,    -2,    -1,    -2,    17,
+      19,    19,    19,    19,    -2,    -2,    -2,    -2,    10,    10
 };
 
 /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -471,14 +471,13 @@ static const yytype_int8 yypact[] =
 static const yytype_int8 yydefact[] =
 {
        2,     0,     1,     0,     0,     5,     3,     0,    10,     0,
-       0,     0,     0,     0,     0,    11,     8,     9,     6,     7,
-       4
+       0,     0,     0,     0,     4,    11,     8,     9,     6,     7
 };
 
 /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-      -6,    -6,    -6,     6
+      -2,    -2,    -2,     6
 };
 
 /* YYDEFGOTO[NTERM-NUM].  */
@@ -492,40 +491,39 @@ static const yytype_int8 yydefgoto[] =
    number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_int8 yytable[] =
 {
-       2,    10,    11,    12,    13,    20,     3,    15,     4,     8,
-       9,     5,    10,    11,     0,     0,    16,    17,    18,    19,
-       3,     0,     4,     0,     0,     5,    10,    11,    12,    13,
-      14
+       2,     0,    10,    11,    12,    13,     3,     0,     4,     8,
+       9,     5,    14,    10,    11,     0,    16,    17,    18,    19,
+      10,    11,    12,    13,     0,     3,    15,     4,     0,     0,
+       5
 };
 
 static const yytype_int8 yycheck[] =
 {
-       0,     3,     4,     5,     6,    10,     6,     9,     8,     3,
-       4,    11,     3,     4,    -1,    -1,    10,    11,    12,    13,
-       6,    -1,     8,    -1,    -1,    11,     3,     4,     5,     6,
-       7
+       0,    -1,     3,     4,     5,     6,     6,    -1,     8,     3,
+       4,    11,    13,     3,     4,    -1,    10,    11,    12,    13,
+       3,     4,     5,     6,    -1,     6,     9,     8,    -1,    -1,
+      11
 };
 
 /* YYSTOS[STATE-NUM] -- The symbol kind of the accessing symbol of
    state STATE-NUM.  */
 static const yytype_int8 yystos[] =
 {
-       0,    14,     0,     6,     8,    11,    15,    16,    16,    16,
-       3,     4,     5,     6,     7,     9,    16,    16,    16,    16,
-      10
+       0,    15,     0,     6,     8,    11,    16,    17,    17,    17,
+       3,     4,     5,     6,    13,     9,    17,    17,    17,    17
 };
 
 /* YYR1[RULE-NUM] -- Symbol kind of the left-hand side of rule RULE-NUM.  */
 static const yytype_int8 yyr1[] =
 {
-       0,    13,    14,    14,    15,    16,    16,    16,    16,    16,
-      16,    16
+       0,    14,    15,    15,    16,    17,    17,    17,    17,    17,
+      17,    17
 };
 
 /* YYR2[RULE-NUM] -- Number of symbols on the right-hand side of rule RULE-NUM.  */
 static const yytype_int8 yyr2[] =
 {
-       0,     2,     0,     2,     3,     1,     3,     3,     3,     3,
+       0,     2,     0,     2,     2,     1,     3,     3,     3,     3,
        2,     3
 };
 
@@ -782,7 +780,7 @@ static const char *yysymbol_name (yysymbol_kind_t yysymbol) YY_ATTRIBUTE_UNUSED;
 static const char *const yytname[] =
 {
   "\"end of file\"", "error", "\"invalid token\"", "MULT", "DIV", "PLUS",
-  "MINUS", "EQUAL", "L_PAREN", "R_PAREN", "END", "NUMBER", "UMINUS",
+  "MINUS", "EQUAL", "L_PAREN", "R_PAREN", "END", "NUMBER", "UMINUS", "';'",
   "$accept", "input", "line", "exp", YY_NULLPTR
 };
 
@@ -1081,65 +1079,65 @@ yyuserAction (yyRuleNum yyrule, int yyrhslen, yyGLRStackItem* yyvsp,
   case 2: /* input: %empty  */
 #line 45 "parser.ypp"
         { ((*yyvalp).cval) = new Data(); }
-#line 1085 "parser.cpp"
+#line 1083 "parser.cpp"
     break;
 
   case 3: /* input: input line  */
 #line 46 "parser.ypp"
                                      { ((*yyvalp).cval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-1)].yystate.yysemantics.yyval.cval); (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-1)].yystate.yysemantics.yyval.cval)->data++; }
-#line 1091 "parser.cpp"
+#line 1089 "parser.cpp"
     break;
 
-  case 4: /* line: exp EQUAL END  */
+  case 4: /* line: exp ';'  */
 #line 49 "parser.ypp"
-                                      { printf("\t%f\n", (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-2)].yystate.yysemantics.yyval.dval));}
-#line 1097 "parser.cpp"
+                                { printf("\t%f\n", (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-1)].yystate.yysemantics.yyval.dval));}
+#line 1095 "parser.cpp"
     break;
 
   case 5: /* exp: NUMBER  */
 #line 52 "parser.ypp"
                                       { ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
-#line 1103 "parser.cpp"
+#line 1101 "parser.cpp"
     break;
 
   case 6: /* exp: exp PLUS exp  */
 #line 53 "parser.ypp"
                                               { ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-2)].yystate.yysemantics.yyval.dval) + (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
-#line 1109 "parser.cpp"
+#line 1107 "parser.cpp"
     break;
 
   case 7: /* exp: exp MINUS exp  */
 #line 54 "parser.ypp"
                                               { ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-2)].yystate.yysemantics.yyval.dval) - (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
-#line 1115 "parser.cpp"
+#line 1113 "parser.cpp"
     break;
 
   case 8: /* exp: exp MULT exp  */
 #line 55 "parser.ypp"
                                               { ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-2)].yystate.yysemantics.yyval.dval) * (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
-#line 1121 "parser.cpp"
+#line 1119 "parser.cpp"
     break;
 
   case 9: /* exp: exp DIV exp  */
 #line 56 "parser.ypp"
                                               { if ((YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval)==0) yyerror("divide by zero"); else ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-2)].yystate.yysemantics.yyval.dval) / (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
-#line 1127 "parser.cpp"
+#line 1125 "parser.cpp"
     break;
 
   case 10: /* exp: MINUS exp  */
 #line 57 "parser.ypp"
                                                  { ((*yyvalp).dval) = -(YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
-#line 1133 "parser.cpp"
+#line 1131 "parser.cpp"
     break;
 
   case 11: /* exp: L_PAREN exp R_PAREN  */
 #line 58 "parser.ypp"
                                               { ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-1)].yystate.yysemantics.yyval.dval); }
-#line 1139 "parser.cpp"
+#line 1137 "parser.cpp"
     break;
 
 
-#line 1143 "parser.cpp"
+#line 1141 "parser.cpp"
 
       default: break;
     }
@@ -2746,17 +2744,7 @@ yypdumpstack (yyGLRStack* yystackp)
 #line 60 "parser.ypp"
 
 
-int main(int argc, char **argv) {
-   /* if (argc > 1) {
-      yy_scan_string(argv[1]);
-      yyin = fopen(argv[1], "r");
-      if (yyin == NULL){
-         printf("syntax: %s filename\n", argv[0]);
-      }//end if
-   }//end if */
-   yyparse(); // Calls yylex() for tokens.
-   return 0;
-}
+
 
 void yyerror(const char *msg) {
    printf("** Line %d: %s\n", yylloc.first_line, msg);
