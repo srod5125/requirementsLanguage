@@ -21,8 +21,12 @@ DIGIT    [0-9]
 
 (\.{DIGIT}+)|({DIGIT}+(\.{DIGIT}*)?([eE][+-]?[0-9]+)?)   {yylval.dval = atof(yytext); return NUMBER;}
 
-[ \t]+         {/* ignore spaces */}
+[ \t\n]+         {/* ignore spaces */}
 
+<<<<<<< HEAD
 .              {printf("Error at line %d: unrecognized symbol \"%s\"\n", yylloc.first_line, yytext);}
+=======
+.              { return *yytext; }
+>>>>>>> lisp
 
 %%

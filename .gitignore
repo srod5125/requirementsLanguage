@@ -10,3 +10,10 @@ CTestTestfile.cmake
 _deps
 
 .vscode
+
+lexer.cpp
+parser.cpp
+parser.hpp
+parser.output
+lexer.hpp
+parser

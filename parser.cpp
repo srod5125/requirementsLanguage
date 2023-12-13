@@ -123,6 +123,7 @@ enum yysymbol_kind_t
   YYSYMBOL_EQUAL = 7,                      /* EQUAL  */
   YYSYMBOL_L_PAREN = 8,                    /* L_PAREN  */
   YYSYMBOL_R_PAREN = 9,                    /* R_PAREN  */
+<<<<<<< HEAD
   YYSYMBOL_NUMBER = 10,                    /* NUMBER  */
   YYSYMBOL_UMINUS = 11,                    /* UMINUS  */
   YYSYMBOL_12_ = 12,                       /* '='  */
@@ -130,6 +131,16 @@ enum yysymbol_kind_t
   YYSYMBOL_input = 14,                     /* input  */
   YYSYMBOL_line = 15,                      /* line  */
   YYSYMBOL_exp = 16                        /* exp  */
+=======
+  YYSYMBOL_END = 10,                       /* END  */
+  YYSYMBOL_NUMBER = 11,                    /* NUMBER  */
+  YYSYMBOL_UMINUS = 12,                    /* UMINUS  */
+  YYSYMBOL_13_ = 13,                       /* ';'  */
+  YYSYMBOL_YYACCEPT = 14,                  /* $accept  */
+  YYSYMBOL_input = 15,                     /* input  */
+  YYSYMBOL_line = 16,                      /* line  */
+  YYSYMBOL_exp = 17                        /* exp  */
+>>>>>>> lisp
 };
 typedef enum yysymbol_kind_t yysymbol_kind_t;
 
@@ -463,13 +474,21 @@ union yyalloc
 #define YYLAST   28
 
 /* YYNTOKENS -- Number of terminals.  */
-#define YYNTOKENS  13
+#define YYNTOKENS  14
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  4
 /* YYNRULES -- Number of rules.  */
 #define YYNRULES  11
 /* YYNSTATES -- Number of states.  */
 #define YYNSTATES  20
+<<<<<<< HEAD
+=======
+/* YYMAXRHS -- Maximum number of symbols on right-hand side of rule.  */
+#define YYMAXRHS 3
+/* YYMAXLEFT -- Maximum number of symbols to the left of a handle
+   accessed by $0, $-1, etc., in any rule.  */
+#define YYMAXLEFT 0
+>>>>>>> lisp
 
 /* YYMAXUTOK -- Last valid token kind.  */
 #define YYMAXUTOK   266
@@ -491,8 +510,13 @@ static const yytype_int8 yytranslate[] =
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+<<<<<<< HEAD
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,    12,     2,     2,     2,     2,     2,     2,     2,     2,
+=======
+       2,     2,     2,     2,     2,     2,     2,     2,     2,    13,
+       2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+>>>>>>> lisp
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -524,6 +548,7 @@ static const yytype_int8 yyrline[] =
 };
 #endif
 
+<<<<<<< HEAD
 /** Accessing symbol of state STATE.  */
 #define YY_ACCESSING_SYMBOL(State) YY_CAST (yysymbol_kind_t, yystos[State])
 
@@ -553,6 +578,9 @@ yysymbol_name (yysymbol_kind_t yysymbol)
 #define yypact_value_is_default(Yyn) \
   ((Yyn) == YYPACT_NINF)
 
+=======
+#define YYPACT_NINF (-2)
+>>>>>>> lisp
 #define YYTABLE_NINF (-1)
 
 #define yytable_value_is_error(Yyn) \
@@ -562,8 +590,13 @@ yysymbol_name (yysymbol_kind_t yysymbol)
    STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
+<<<<<<< HEAD
       -5,     5,    -5,    -4,    -4,    -5,    -5,    13,    -5,    17,
       -4,    -4,    -4,    -4,    -5,    -5,    -5,    -5,    24,    24
+=======
+      -2,     0,    -2,    19,    19,    -2,    -2,    -1,    -2,    17,
+      19,    19,    19,    19,    -2,    -2,    -2,    -2,    10,    10
+>>>>>>> lisp
 };
 
 /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -578,7 +611,11 @@ static const yytype_int8 yydefact[] =
 /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
+<<<<<<< HEAD
       -5,    -5,    -5,    -3
+=======
+      -2,    -2,    -2,     6
+>>>>>>> lisp
 };
 
 /* YYDEFGOTO[NTERM-NUM].  */
@@ -592,31 +629,50 @@ static const yytype_int8 yydefgoto[] =
    number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_int8 yytable[] =
 {
+<<<<<<< HEAD
        8,     9,     3,     0,     4,     2,     5,    16,    17,    18,
       19,     3,     0,     4,     0,     5,    10,    11,    12,    13,
       10,    11,    12,    13,     0,    14,    15,    10,    11
+=======
+       2,     0,    10,    11,    12,    13,     3,     0,     4,     8,
+       9,     5,    14,    10,    11,     0,    16,    17,    18,    19,
+      10,    11,    12,    13,     0,     3,    15,     4,     0,     0,
+       5
+>>>>>>> lisp
 };
 
 static const yytype_int8 yycheck[] =
 {
+<<<<<<< HEAD
        3,     4,     6,    -1,     8,     0,    10,    10,    11,    12,
       13,     6,    -1,     8,    -1,    10,     3,     4,     5,     6,
        3,     4,     5,     6,    -1,    12,     9,     3,     4
+=======
+       0,    -1,     3,     4,     5,     6,     6,    -1,     8,     3,
+       4,    11,    13,     3,     4,    -1,    10,    11,    12,    13,
+       3,     4,     5,     6,    -1,     6,     9,     8,    -1,    -1,
+      11
+>>>>>>> lisp
 };
 
 /* YYSTOS[STATE-NUM] -- The symbol kind of the accessing symbol of
    state STATE-NUM.  */
 static const yytype_int8 yystos[] =
 {
+<<<<<<< HEAD
        0,    14,     0,     6,     8,    10,    15,    16,    16,    16,
        3,     4,     5,     6,    12,     9,    16,    16,    16,    16
+=======
+       0,    15,     0,     6,     8,    11,    16,    17,    17,    17,
+       3,     4,     5,     6,    13,     9,    17,    17,    17,    17
+>>>>>>> lisp
 };
 
 /* YYR1[RULE-NUM] -- Symbol kind of the left-hand side of rule RULE-NUM.  */
 static const yytype_int8 yyr1[] =
 {
-       0,    13,    14,    14,    15,    16,    16,    16,    16,    16,
-      16,    16
+       0,    14,    15,    15,    16,    17,    17,    17,    17,    17,
+      17,    17
 };
 
 /* YYR2[RULE-NUM] -- Number of symbols on the right-hand side of rule RULE-NUM.  */
@@ -688,7 +744,211 @@ enum { YYENOMEM = -2 };
 #define YYRHSLOC(Rhs, K) ((Rhs)[K])
 
 
+<<<<<<< HEAD
 /* Enable debugging if requested.  */
+=======
+YYSTYPE yylval;
+YYLTYPE yylloc;
+
+int yynerrs;
+int yychar;
+
+enum { YYENOMEM = -2 };
+
+typedef enum { yyok, yyaccept, yyabort, yyerr, yynomem } YYRESULTTAG;
+
+#define YYCHK(YYE)                              \
+  do {                                          \
+    YYRESULTTAG yychk_flag = YYE;               \
+    if (yychk_flag != yyok)                     \
+      return yychk_flag;                        \
+  } while (0)
+
+/* YYINITDEPTH -- initial size of the parser's stacks.  */
+#ifndef YYINITDEPTH
+# define YYINITDEPTH 200
+#endif
+
+/* YYMAXDEPTH -- maximum size the stacks can grow to (effective only
+   if the built-in stack extension method is used).
+
+   Do not make this value too large; the results are undefined if
+   SIZE_MAX < YYMAXDEPTH * sizeof (GLRStackItem)
+   evaluated with infinite-precision integer arithmetic.  */
+
+#ifndef YYMAXDEPTH
+# define YYMAXDEPTH 10000
+#endif
+
+/* Minimum number of free items on the stack allowed after an
+   allocation.  This is to allow allocation and initialization
+   to be completed by functions that call yyexpandGLRStack before the
+   stack is expanded, thus insuring that all necessary pointers get
+   properly redirected to new data.  */
+#define YYHEADROOM 2
+
+#ifndef YYSTACKEXPANDABLE
+#  define YYSTACKEXPANDABLE 1
+#endif
+
+#if YYSTACKEXPANDABLE
+# define YY_RESERVE_GLRSTACK(Yystack)                   \
+  do {                                                  \
+    if (Yystack->yyspaceLeft < YYHEADROOM)              \
+      yyexpandGLRStack (Yystack);                       \
+  } while (0)
+#else
+# define YY_RESERVE_GLRSTACK(Yystack)                   \
+  do {                                                  \
+    if (Yystack->yyspaceLeft < YYHEADROOM)              \
+      yyMemoryExhausted (Yystack);                      \
+  } while (0)
+#endif
+
+/** State numbers. */
+typedef int yy_state_t;
+
+/** Rule numbers. */
+typedef int yyRuleNum;
+
+/** Item references. */
+typedef short yyItemNum;
+
+typedef struct yyGLRState yyGLRState;
+typedef struct yyGLRStateSet yyGLRStateSet;
+typedef struct yySemanticOption yySemanticOption;
+typedef union yyGLRStackItem yyGLRStackItem;
+typedef struct yyGLRStack yyGLRStack;
+
+struct yyGLRState
+{
+  /** Type tag: always true.  */
+  yybool yyisState;
+  /** Type tag for yysemantics.  If true, yyval applies, otherwise
+   *  yyfirstVal applies.  */
+  yybool yyresolved;
+  /** Number of corresponding LALR(1) machine state.  */
+  yy_state_t yylrState;
+  /** Preceding state in this stack */
+  yyGLRState* yypred;
+  /** Source position of the last token produced by my symbol */
+  YYPTRDIFF_T yyposn;
+  union {
+    /** First in a chain of alternative reductions producing the
+     *  nonterminal corresponding to this state, threaded through
+     *  yynext.  */
+    yySemanticOption* yyfirstVal;
+    /** Semantic value for this state.  */
+    YYSTYPE yyval;
+  } yysemantics;
+  /** Source location for this state.  */
+  YYLTYPE yyloc;
+};
+
+struct yyGLRStateSet
+{
+  yyGLRState** yystates;
+  /** During nondeterministic operation, yylookaheadNeeds tracks which
+   *  stacks have actually needed the current lookahead.  During deterministic
+   *  operation, yylookaheadNeeds[0] is not maintained since it would merely
+   *  duplicate yychar != YYEMPTY.  */
+  yybool* yylookaheadNeeds;
+  YYPTRDIFF_T yysize;
+  YYPTRDIFF_T yycapacity;
+};
+
+struct yySemanticOption
+{
+  /** Type tag: always false.  */
+  yybool yyisState;
+  /** Rule number for this reduction */
+  yyRuleNum yyrule;
+  /** The last RHS state in the list of states to be reduced.  */
+  yyGLRState* yystate;
+  /** The lookahead for this reduction.  */
+  int yyrawchar;
+  YYSTYPE yyval;
+  YYLTYPE yyloc;
+  /** Next sibling in chain of options.  To facilitate merging,
+   *  options are chained in decreasing order by address.  */
+  yySemanticOption* yynext;
+};
+
+/** Type of the items in the GLR stack.  The yyisState field
+ *  indicates which item of the union is valid.  */
+union yyGLRStackItem {
+  yyGLRState yystate;
+  yySemanticOption yyoption;
+};
+
+struct yyGLRStack {
+  int yyerrState;
+  /* To compute the location of the error token.  */
+  yyGLRStackItem yyerror_range[3];
+
+  YYJMP_BUF yyexception_buffer;
+  yyGLRStackItem* yyitems;
+  yyGLRStackItem* yynextFree;
+  YYPTRDIFF_T yyspaceLeft;
+  yyGLRState* yysplitPoint;
+  yyGLRState* yylastDeleted;
+  yyGLRStateSet yytops;
+};
+
+#if YYSTACKEXPANDABLE
+static void yyexpandGLRStack (yyGLRStack* yystackp);
+#endif
+
+_Noreturn static void
+yyFail (yyGLRStack* yystackp, const char* yymsg)
+{
+  if (yymsg != YY_NULLPTR)
+    yyerror (yymsg);
+  YYLONGJMP (yystackp->yyexception_buffer, 1);
+}
+
+_Noreturn static void
+yyMemoryExhausted (yyGLRStack* yystackp)
+{
+  YYLONGJMP (yystackp->yyexception_buffer, 2);
+}
+
+/** Accessing symbol of state YYSTATE.  */
+static inline yysymbol_kind_t
+yy_accessing_symbol (yy_state_t yystate)
+{
+  return YY_CAST (yysymbol_kind_t, yystos[yystate]);
+}
+
+#if YYDEBUG || 0
+/* The user-facing name of the symbol whose (internal) number is
+   YYSYMBOL.  No bounds checking.  */
+static const char *yysymbol_name (yysymbol_kind_t yysymbol) YY_ATTRIBUTE_UNUSED;
+
+/* YYTNAME[SYMBOL-NUM] -- String name of the symbol SYMBOL-NUM.
+   First, the terminals, then, starting at YYNTOKENS, nonterminals.  */
+static const char *const yytname[] =
+{
+  "\"end of file\"", "error", "\"invalid token\"", "MULT", "DIV", "PLUS",
+  "MINUS", "EQUAL", "L_PAREN", "R_PAREN", "END", "NUMBER", "UMINUS", "';'",
+  "$accept", "input", "line", "exp", YY_NULLPTR
+};
+
+static const char *
+yysymbol_name (yysymbol_kind_t yysymbol)
+{
+  return yytname[yysymbol];
+}
+#endif
+
+/** Left-hand-side symbol for rule #YYRULE.  */
+static inline yysymbol_kind_t
+yylhsNonterm (yyRuleNum yyrule)
+{
+  return YY_CAST (yysymbol_kind_t, yyr1[yyrule]);
+}
+
+>>>>>>> lisp
 #if YYDEBUG
 
 # ifndef YYFPRINTF
@@ -893,8 +1153,163 @@ int yydebug;
 #endif
 
 
+<<<<<<< HEAD
 
 
+=======
+/** If yychar is empty, fetch the next token.  */
+static inline yysymbol_kind_t
+yygetToken (int *yycharp)
+{
+  yysymbol_kind_t yytoken;
+  if (*yycharp == YYEMPTY)
+    {
+      YY_DPRINTF ((stderr, "Reading a token\n"));
+      *yycharp = yylex ();
+    }
+  if (*yycharp <= YYEOF)
+    {
+      *yycharp = YYEOF;
+      yytoken = YYSYMBOL_YYEOF;
+      YY_DPRINTF ((stderr, "Now at end of input.\n"));
+    }
+  else
+    {
+      yytoken = YYTRANSLATE (*yycharp);
+      YY_SYMBOL_PRINT ("Next token is", yytoken, &yylval, &yylloc);
+    }
+  return yytoken;
+}
+
+/* Do nothing if YYNORMAL or if *YYLOW <= YYLOW1.  Otherwise, fill in
+ * YYVSP[YYLOW1 .. *YYLOW-1] as in yyfillin and set *YYLOW = YYLOW1.
+ * For convenience, always return YYLOW1.  */
+static inline int yyfill (yyGLRStackItem *, int *, int, yybool)
+     YY_ATTRIBUTE_UNUSED;
+static inline int
+yyfill (yyGLRStackItem *yyvsp, int *yylow, int yylow1, yybool yynormal)
+{
+  if (!yynormal && yylow1 < *yylow)
+    {
+      yyfillin (yyvsp, *yylow, yylow1);
+      *yylow = yylow1;
+    }
+  return yylow1;
+}
+
+/** Perform user action for rule number YYN, with RHS length YYRHSLEN,
+ *  and top stack item YYVSP.  YYLVALP points to place to put semantic
+ *  value ($$), and yylocp points to place for location information
+ *  (@$).  Returns yyok for normal return, yyaccept for YYACCEPT,
+ *  yyerr for YYERROR, yyabort for YYABORT, yynomem for YYNOMEM.  */
+static YYRESULTTAG
+yyuserAction (yyRuleNum yyrule, int yyrhslen, yyGLRStackItem* yyvsp,
+              yyGLRStack* yystackp, YYPTRDIFF_T yyk,
+              YYSTYPE* yyvalp, YYLTYPE *yylocp)
+{
+  const yybool yynormal YY_ATTRIBUTE_UNUSED = yystackp->yysplitPoint == YY_NULLPTR;
+  int yylow = 1;
+  YY_USE (yyvalp);
+  YY_USE (yylocp);
+  YY_USE (yyk);
+  YY_USE (yyrhslen);
+# undef yyerrok
+# define yyerrok (yystackp->yyerrState = 0)
+# undef YYACCEPT
+# define YYACCEPT return yyaccept
+# undef YYABORT
+# define YYABORT return yyabort
+# undef YYNOMEM
+# define YYNOMEM return yynomem
+# undef YYERROR
+# define YYERROR return yyerrok, yyerr
+# undef YYRECOVERING
+# define YYRECOVERING() (yystackp->yyerrState != 0)
+# undef yyclearin
+# define yyclearin (yychar = YYEMPTY)
+# undef YYFILL
+# define YYFILL(N) yyfill (yyvsp, &yylow, (N), yynormal)
+# undef YYBACKUP
+# define YYBACKUP(Token, Value)                                              \
+  return yyerror (YY_("syntax error: cannot back up")),     \
+         yyerrok, yyerr
+
+  if (yyrhslen == 0)
+    *yyvalp = yyval_default;
+  else
+    *yyvalp = yyvsp[YYFILL (1-yyrhslen)].yystate.yysemantics.yyval;
+  /* Default location. */
+  YYLLOC_DEFAULT ((*yylocp), (yyvsp - yyrhslen), yyrhslen);
+  yystackp->yyerror_range[1].yystate.yyloc = *yylocp;
+  /* If yyk == -1, we are running a deferred action on a temporary
+     stack.  In that case, YY_REDUCE_PRINT must not play with YYFILL,
+     so pretend the stack is "normal". */
+  YY_REDUCE_PRINT ((yynormal || yyk == -1, yyvsp, yyk, yyrule));
+  switch (yyrule)
+    {
+  case 2: /* input: %empty  */
+#line 45 "parser.ypp"
+        { ((*yyvalp).cval) = new Data(); }
+#line 1083 "parser.cpp"
+    break;
+
+  case 3: /* input: input line  */
+#line 46 "parser.ypp"
+                                     { ((*yyvalp).cval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-1)].yystate.yysemantics.yyval.cval); (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-1)].yystate.yysemantics.yyval.cval)->data++; }
+#line 1089 "parser.cpp"
+    break;
+
+  case 4: /* line: exp ';'  */
+#line 49 "parser.ypp"
+                                { printf("\t%f\n", (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-1)].yystate.yysemantics.yyval.dval));}
+#line 1095 "parser.cpp"
+    break;
+
+  case 5: /* exp: NUMBER  */
+#line 52 "parser.ypp"
+                                      { ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
+#line 1101 "parser.cpp"
+    break;
+
+  case 6: /* exp: exp PLUS exp  */
+#line 53 "parser.ypp"
+                                              { ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-2)].yystate.yysemantics.yyval.dval) + (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
+#line 1107 "parser.cpp"
+    break;
+
+  case 7: /* exp: exp MINUS exp  */
+#line 54 "parser.ypp"
+                                              { ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-2)].yystate.yysemantics.yyval.dval) - (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
+#line 1113 "parser.cpp"
+    break;
+
+  case 8: /* exp: exp MULT exp  */
+#line 55 "parser.ypp"
+                                              { ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-2)].yystate.yysemantics.yyval.dval) * (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
+#line 1119 "parser.cpp"
+    break;
+
+  case 9: /* exp: exp DIV exp  */
+#line 56 "parser.ypp"
+                                              { if ((YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval)==0) yyerror("divide by zero"); else ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-2)].yystate.yysemantics.yyval.dval) / (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
+#line 1125 "parser.cpp"
+    break;
+
+  case 10: /* exp: MINUS exp  */
+#line 57 "parser.ypp"
+                                                 { ((*yyvalp).dval) = -(YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (0)].yystate.yysemantics.yyval.dval); }
+#line 1131 "parser.cpp"
+    break;
+
+  case 11: /* exp: L_PAREN exp R_PAREN  */
+#line 58 "parser.ypp"
+                                              { ((*yyvalp).dval) = (YY_CAST (yyGLRStackItem const *, yyvsp)[YYFILL (-1)].yystate.yysemantics.yyval.dval); }
+#line 1137 "parser.cpp"
+    break;
+
+
+#line 1141 "parser.cpp"
+>>>>>>> lisp
 
 
 /*-----------------------------------------------.
@@ -1461,17 +1876,7 @@ yyreturnlab:
 #line 59 "parser.ypp"
 
 
-int main(int argc, char **argv) {
-   /* if (argc > 1) {
-      yy_scan_string(argv[1]);
-      yyin = fopen(argv[1], "r");
-      if (yyin == NULL){
-         printf("syntax: %s filename\n", argv[0]);
-      }//end if
-   }//end if */
-   yyparse(); // Calls yylex() for tokens.
-   return 0;
-}
+
 
 void yyerror(const char *msg) {
    printf("** Line %d: %s\n", yylloc.first_line, msg);
