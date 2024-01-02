@@ -45,11 +45,7 @@ input:	{ $$ = new Data(); }
 			| input line { $$ = $1; $1->data++; }
 			;
 
-<<<<<<< HEAD
-line:		exp EQUAL ';'         { printf("\t->%f\n", $1);}
-=======
 line:		exp ';'         { printf("\t%f\n", $1);}
->>>>>>> lisp
 			;
 
 exp:		NUMBER                { $$ = $1; }
@@ -63,7 +59,3 @@ exp:		NUMBER                { $$ = $1; }
 %%
 
 
-
-void yyerror(const char *msg) {
-   printf("** Line %d: %s\n", yylloc.first_line, msg);
-}

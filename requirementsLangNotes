@@ -33,3 +33,10 @@ with special messaging module offered
 
 
 TODO: make make file
+
+
+PHASE 1: implement language, python
+PHASE 2: pygame drawing gui interface sketch thing
+PHASE 3: attempt temporal logic implementation
+PHASE 4: attempt editor style interactive mode with gui
+PHASE 5: develop wider tooling for interfacing with different editors

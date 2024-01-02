@@ -5,6 +5,11 @@
 
 extern FILE* yyin;
 
+
+void yyerror(const char *msg) {
+   printf("** Line %d: %s\n", yylloc.first_line, msg);
+}
+
 int main(int argc, char **argv) {
    if (argc > 1) {
       //yy_scan_string(argv[1]);

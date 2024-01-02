@@ -434,13 +434,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 /* %% [3.0] code to copy yytext_ptr to yytext[] goes here, if %array \ */\
 	(yy_c_buf_p) = yy_cp;
 /* %% [4.0] data tables for the DFA and the user's section 1 definitions go here */
-<<<<<<< HEAD
-#define YY_NUM_RULES 6
-#define YY_END_OF_BUFFER 7
-=======
 #define YY_NUM_RULES 11
 #define YY_END_OF_BUFFER 12
->>>>>>> lisp
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -448,16 +443,11 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[12] =
+static const flex_int16_t yy_accept[25] =
     {   0,
-<<<<<<< HEAD
-        0,    0,    7,    5,    4,    6,    3,    2,    1,    4,
-        0
-=======
         0,    0,   12,   10,    9,    9,    6,    7,    3,    2,
         1,   10,    4,    8,    5,    9,    8,    8,    8,    0,
         8,    0,    8,    0
->>>>>>> lisp
     } ;
 
 static const YY_CHAR yy_ec[256] =
@@ -465,16 +455,16 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    2,    4,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    5,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    2,    1,    1,    1,    1,    1,    1,    1,    4,
+        5,    6,    7,    1,    8,    9,   10,   11,   11,   11,
+       11,   11,   11,   11,   11,   11,   11,    1,    1,    1,
+       12,    1,    1,    1,    1,    1,    1,    1,   13,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
 
+       13,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    6,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -492,35 +482,8 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[7] =
+static const YY_CHAR yy_meta[14] =
     {   0,
-<<<<<<< HEAD
-        1,    2,    1,    1,    1,    1
-    } ;
-
-static const flex_int16_t yy_base[13] =
-    {   0,
-        0,    0,    8,    9,    0,    9,    9,    9,    9,    0,
-        9,    5
-    } ;
-
-static const flex_int16_t yy_def[13] =
-    {   0,
-       11,    1,   11,   11,   12,   11,   11,   11,   11,   12,
-        0,   11
-    } ;
-
-static const flex_int16_t yy_nxt[16] =
-    {   0,
-        4,    5,    6,    7,    8,    9,   10,   11,    3,   11,
-       11,   11,   11,   11,   11
-    } ;
-
-static const flex_int16_t yy_chk[16] =
-    {   0,
-        1,    1,    1,    1,    1,    1,   12,    3,   11,   11,
-       11,   11,   11,   11,   11
-=======
         1,    2,    2,    1,    1,    1,    3,    3,    1,    1,
         3,    1,    1
     } ;
@@ -553,7 +516,6 @@ static const flex_int16_t yy_chk[41] =
         1,    1,    1,   14,   26,   14,   25,   14,   18,   23,
        18,   22,   20,   17,   12,    3,   24,   24,   24,   24,
        24,   24,   24,   24,   24,   24,   24,   24,   24,   24
->>>>>>> lisp
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -562,15 +524,9 @@ static char *yy_last_accepting_cpos;
 extern int yy_flex_debug;
 int yy_flex_debug = 1;
 
-<<<<<<< HEAD
-static const flex_int16_t yy_rule_linenum[6] =
-    {   0,
-       12,   13,   14,   16,   18
-=======
 static const flex_int16_t yy_rule_linenum[11] =
     {   0,
        14,   15,   16,   17,   18,   19,   20,   22,   24,   26
->>>>>>> lisp
     } ;
 
 /* The intent behind this definition is that it'll catch
@@ -587,13 +543,8 @@ char *yytext;
     #include "parser.hpp"
     //#define YY_USER_ACTION yylloc.first_line = yylloc.last_line = yylineno;
 
-<<<<<<< HEAD
-#line 539 "lexer.cpp"
-#line 540 "lexer.cpp"
-=======
 #line 547 "lexer.cpp"
 #line 548 "lexer.cpp"
->>>>>>> lisp
 
 #define INITIAL 0
 
@@ -873,14 +824,10 @@ YY_DECL
 
 	{
 /* %% [7.0] user's declarations go here */
-#line 10 "lexer.l"
+#line 12 "lexer.l"
 
 
-<<<<<<< HEAD
-#line 823 "lexer.cpp"
-=======
 #line 831 "lexer.cpp"
->>>>>>> lisp
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -909,17 +856,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 12 )
+				if ( yy_current_state >= 25 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-<<<<<<< HEAD
-		while ( yy_base[yy_current_state] != 9 );
-=======
 		while ( yy_base[yy_current_state] != 27 );
->>>>>>> lisp
 
 yy_find_action:
 /* %% [10.0] code to find the action number goes here */
@@ -942,15 +885,6 @@ do_action:	/* This label is used only to access EOF actions. */
 			{
 			if ( yy_act == 0 )
 				fprintf( stderr, "--scanner backing up\n" );
-<<<<<<< HEAD
-			else if ( yy_act < 6 )
-				fprintf( stderr, "--accepting rule at line %ld (\"%s\")\n",
-				         (long)yy_rule_linenum[yy_act], yytext );
-			else if ( yy_act == 6 )
-				fprintf( stderr, "--accepting default rule (\"%s\")\n",
-				         yytext );
-			else if ( yy_act == 7 )
-=======
 			else if ( yy_act < 11 )
 				fprintf( stderr, "--accepting rule at line %ld (\"%s\")\n",
 				         (long)yy_rule_linenum[yy_act], yytext );
@@ -958,7 +892,6 @@ do_action:	/* This label is used only to access EOF actions. */
 				fprintf( stderr, "--accepting default rule (\"%s\")\n",
 				         yytext );
 			else if ( yy_act == 12 )
->>>>>>> lisp
 				fprintf( stderr, "--(end of buffer or a NUL)\n" );
 			else
 				fprintf( stderr, "--EOF (start condition %d)\n", YY_START );
@@ -976,37 +909,37 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 12 "lexer.l"
-{return IDENTIFIER;}
+#line 14 "lexer.l"
+{return MINUS;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 13 "lexer.l"
-{return CONSTANT;}
+#line 15 "lexer.l"
+{return PLUS;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 14 "lexer.l"
-{return NIL;}
+#line 16 "lexer.l"
+{return MULT;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 16 "lexer.l"
-{/* ignore spaces */}
+#line 17 "lexer.l"
+{return DIV;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 18 "lexer.l"
-{printf("Error at line %d: unrecognized symbol \"%s\"\n", yylloc.first_line, yytext);}
+{return EQUAL;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 20 "lexer.l"
-<<<<<<< HEAD
-ECHO;
+#line 19 "lexer.l"
+{return L_PAREN;}
 	YY_BREAK
-#line 933 "lexer.cpp"
-=======
+case 7:
+YY_RULE_SETUP
+#line 20 "lexer.l"
 {return R_PAREN;}
 	YY_BREAK
 case 8:
@@ -1031,7 +964,6 @@ YY_RULE_SETUP
 ECHO;
 	YY_BREAK
 #line 967 "lexer.cpp"
->>>>>>> lisp
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1351,7 +1283,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 12 )
+			if ( yy_current_state >= 25 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1384,11 +1316,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 12 )
+		if ( yy_current_state >= 25 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 11);
+	yy_is_jam = (yy_current_state == 24);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -2180,9 +2112,5 @@ void yyfree (void * ptr )
 
 /* %ok-for-header */
 
-<<<<<<< HEAD
-#line 20 "lexer.l"
-=======
 #line 28 "lexer.l"
->>>>>>> lisp
 

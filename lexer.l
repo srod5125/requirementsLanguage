@@ -23,10 +23,6 @@ DIGIT    [0-9]
 
 [ \t\n]+         {/* ignore spaces */}
 
-<<<<<<< HEAD
-.              {printf("Error at line %d: unrecognized symbol \"%s\"\n", yylloc.first_line, yytext);}
-=======
 .              { return *yytext; }
->>>>>>> lisp
 
 %%
