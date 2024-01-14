@@ -17,3 +17,5 @@ parser.hpp
 parser.output
 lexer.hpp
 parser
+
+requirementsLangNotes

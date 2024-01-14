@@ -40,3 +40,71 @@ PHASE 2: pygame drawing gui interface sketch thing
 PHASE 3: attempt temporal logic implementation
 PHASE 4: attempt editor style interactive mode with gui
 PHASE 5: develop wider tooling for interfacing with different editors
+
+should also be query languages, 
+
+For an example of using the LTL DSL, consider the following formulation of a problem in which six people are attempting to cross a river in a boat that holds at most two people at a time. Also, the six people are 3 couples, with jealous husbands, such that no woman may be around another man without also being around her husband. The boat cannot cross the river without someone in it.
+
+AGENT,ENVIRONEMNT, ITEM
+declare people, river, boat
+
+6 people cross river
+boat.capacity < 2
+A couple is 2 people
+
+labels:
+    people
+schemas:
+    couple = {husband,wife}
+    river = [2 x boat!]
+    boat = { people; people }
+    husband : people
+    wife : people
+vars:
+    3 couple = couples
+    1 boat
+    1 river
+
+boat.cross_river is
+    when river = [;boat]
+        then river = [boat;]
+
+    when river = [boat;]
+        then river = [;boat]
+
+when boat = {}
+    boat cannot cross_river
+otherwise
+    boat can cross_river
+
+func addall(somevec: vec){
+    for i in doman(somevec)
+        sum += i
+    return sum
+}
+setops: 
+
+
+
+
+Also, the six people are 3 couples, with jealous husbands, such that no woman may be around another man without also being around her husband.
+
+Only the system’s data administrator can change access permissions for the particular system information may only be changed by the system’s data administrator.
+
+The database update process must roll back all related updates when any update fails.
+
+cross product between object in the containing system & the lower level objects
+
+a computer must back up before power cuts of
+a computer is stored in a building
+
+[expectant queries]
+given this scenario ... 
+    what should one expect
+    should we expect the following to hold
+    does that violate any previously held assumptions
+
+[write a test given this happens]
+what are some things that must hold for the following to be true
+
+schemes, inits?, actions, checks
